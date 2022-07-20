@@ -1,4 +1,5 @@
 import './App.css';
+import Fighter from "./components/Fighter"
 
 function App() {
   const fighters = ['Roy', 'Ganondorf', 'Mario', 'Luigi', 'Marth', 'Link', 'Inkling', 'Samus', 'Fox', 'Sheik', 'Zelda', 'Ken']
@@ -9,9 +10,7 @@ function App() {
         {
           fighters.map((element, index) => {
             return(
-              <div>
-                <img src={`https://www.smashbros.com/assets_v2/img/fighter/thumb_a/${element.toLowerCase()}.png`} />
-              </div>
+              <Fighter fighter={element} />
             )
           })
         }

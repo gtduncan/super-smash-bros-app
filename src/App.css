@@ -1,16 +1,41 @@
 .App {
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column
 }
 
 .fighters-grid {
   display: flex;
   flex-wrap: wrap;
+  width: calc(205px*4);
+  gap:3px;
 }
 
 .fighters-grid div {
+  width:200px;
+  position: relative;
   transition: transform 0.3s;
+  background-color: slategray;
 }
 
 .fighters-grid div:hover {
-  transform: scale(1.07)
+  transform: scale(1.07);
+  cursor: pointer;
+}
+
+.fighter-name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.8em;
+  color: white;
+  text-shadow: 2px 2px #000;
+  text-transform: uppercase;
+}
+
+.fighter-img {
+  width: 100%;
+  height: auto;
 }
